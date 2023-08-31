@@ -9,8 +9,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
   -->
 
-  <style>
+ <style>
     :root {
+
       --my-color:#0DFFBA;
       --my-color-accent:#f90196;
       --black: #3c3c3c;
@@ -57,12 +58,22 @@
 
     .my-color {
       background-color: var(--my-color);
+      --icon-color: var(--my-color);  /* Cor padrão */
     }
 
+    .my-color i {
+  color: var(--icon-color);
+}
+
     .my-color:hover {
+      --icon-color: var(--my-color-accent);  /* Cor ao passar o mouse */
       background-color: var(--my-color-accent);
       color: #FFFFFF;      
     }
+
+    .my-color:hover i {
+  color: var(--icon-color);
+}
 
     .my-color.threeD {
       box-shadow: 0px 4px 0px var(--my-color-accent);
@@ -249,15 +260,5 @@
 </head>
 
 <body>
-
-  <button class="btn large my-color rounded threeD" type="button" onclick="navigate()"> <i class="fa-solid fa-database" style="color: #ffffff;"></i> Data Management</button>
-  
-  <script>
-    function navigate() {
-      window.open('https://www.notion.so/vinnyramos/Dataviz-f19d10b15cfc4ae0becf7c6ef776b4e1?pvs=4');
-    }
-  </script>
-
-</body>
 
 </html>

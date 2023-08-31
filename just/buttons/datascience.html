@@ -11,6 +11,7 @@
 
   <style>
     :root {
+
       --my-color:#0DFFBA;
       --my-color-accent:#f90196;
       --black: #3c3c3c;
@@ -57,12 +58,22 @@
 
     .my-color {
       background-color: var(--my-color);
+      --icon-color: var(--my-color);  /* Cor padrão */
     }
 
+    .my-color i {
+  color: var(--icon-color);
+}
+
     .my-color:hover {
+      --icon-color: var(--my-color-accent);  /* Cor ao passar o mouse */
       background-color: var(--my-color-accent);
       color: #FFFFFF;      
     }
+
+    .my-color:hover i {
+  color: var(--icon-color);
+}
 
     .my-color.threeD {
       box-shadow: 0px 4px 0px var(--my-color-accent);
